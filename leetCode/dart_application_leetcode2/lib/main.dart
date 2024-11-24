@@ -15,9 +15,12 @@ List<int> twoSum(List<int> nums, int target) {
         break;
       } else {
         if (nums.contains(target - nums[i])) {
-          findNextIndex = nums.indexWhere(
+           findNextIndex = nums.lastIndexWhere(
             (element) => element == target - nums[i],
           );
+          // findNextIndex = nums.indexWhere(
+          //   (element) => element == target - nums[i],
+          // );
           if (findNextIndex != i) {
             indexOfNum.add(i);
             indexOfNum.add(findNextIndex);
